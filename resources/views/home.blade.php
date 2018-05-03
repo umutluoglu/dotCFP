@@ -12,7 +12,7 @@
                         <div id="slider" class="carousel slide" data-ride="carousel">
                             <!-- Indicators -->
                             <ol class="carousel-indicators">
-                                @for($i = 0; $i < 5; $i++)
+                                @for($i = 0; $i < 4; $i++)
                                     <li data-target="#slider" data-slide-to="{{ $i }}" @if($i == 0)class="active" @endif></li>
                                 @endfor
                             </ol>
@@ -20,9 +20,9 @@
                             <!-- Wrapper for slides -->
                             <div class="carousel-inner">
 
-                                @for($i = 0; $i < 5; $i++)
+                                @for($i = 0; $i < 4; $i++)
                                 <div class="item @if($i == 0)active @endif">
-                                    <img src="{{ url("/images/$i.jpg") }}" alt="PHPKonf 2017" style="width:100%;">
+                                    <img src="{{ url("/images/$i.jpg") }}" alt="{{ config('dotcfp.event_name') }}" style="width:100%;">
                                 </div>
                                 @endfor
 
